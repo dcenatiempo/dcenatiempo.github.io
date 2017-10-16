@@ -1,0 +1,236 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Bubbler One', sans-serif;
+  font-size: 24px;
+}
+
+button {
+      font-family: 'Bubbler One', sans-serif;
+      padding: 0 25px;
+      margin: 10px !important;
+      height: 48px;
+      background-color: #3cc26d;
+      border: 0px solid #4CAF50;
+      border-radius: 3px;
+      color: white;
+}
+/*forces media to be no bigger than screen/container size*/
+img, embed, object, video {
+  max-width:100%;
+  min-width: 250px;
+
+}
+
+header {
+  width: 100%;
+  background-color: #3cc26d;
+}
+
+footer {
+  width: 100%;
+  background-color: gray;
+  text-align: center;
+  color: white;
+  padding: 20px 0;
+}
+
+h1 {
+  padding: 10px 0 0 50px;
+  font-family: 'Denk One', sans-serif;
+}
+
+input {
+  width: 100%;
+}
+
+nav {
+  padding: 10px 0;
+  color: white;
+  font-family: 'Denk One', sans-serif;
+}
+
+a, a:visited, a:link a:hover{
+  color: white;
+}
+
+/*** responsive hamburger menu ***********************************/
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+  border-radius: 2px;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+.hidden{
+  display: none;
+}
+
+.outer {
+  position: fixed;
+  right: 0px;
+  top: 60px;
+  background-color: #3cc26d;
+}
+.inner {
+  position: relative;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+/*********************************************************/
+
+/* main body elements will always stack*/
+.flex-body {
+    display: flex;                /* signifies this is a flex parent*/
+/*    flex-direction: column;       /* defines main axis (row, row-reverse, column, column-reverse)*/
+/*    flex-wrap: wrap;              /* defines wraping properties (nowrap, wrap, wrap-reverse)*/
+    flex-flow: column nowrap;       /* combination of flex-direction & flex-wrap */
+    justify-content: flex-start;  /* defines alignment along main axis (flex-start, flex-end, center, space-between, space-around)*/
+    align-items: center;          /* defines alignment along cross axis (flex-start, flex-end, center, stretch, baseline)*/
+    align-content: flex-start;    /* defines spacing of lines of cross axis if extra space (flex-start, flex-end, center, stretch,space-between, space-around)*/
+    background-color: #d4c2a5;
+}
+
+.flex-header {
+  /* flex parent attributes*/
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+
+  position: -webkit-sticky;  /* required for Safari */
+  position: sticky;
+  top: 0; /* required as well. */
+  height: 60px;
+}
+
+.flex-header2 {
+  /* flex parent attributes*/
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  /*flex child attributes*/
+  width: 100%;
+  max-width: 960px;
+}
+
+.flex-main {
+  /* flex parent attributes*/
+  display: flex;
+  flex-flow: column wrap;
+  /*flex child attributes*/
+  width: 100%;
+  max-width: 960px;
+  background-color: white;
+}
+
+.flex-portfolio {
+  /* flex parent attributes*/
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;  /* defines alignment along main axis (flex-start, flex-end, center, space-between, space-around)*/
+  align-items: flex-start;          /* defines alignment along cross axis (flex-start, flex-end, center, stretch, baseline)*/
+  /*align-content: stretch;    /* defines spacing of lines of cross axis if extra space (flex-start, flex-end, center, stretch,space-between, space-around)*/
+}
+
+.flex-portfolio-item {
+  /* flex child attributes*/
+  flex: 1 0 40%; /**/
+  margin: 0%;
+}
+
+.flex-portfolio-item1, .flex-portfolio-item2 {
+  /* flex child attributes*/
+  flex: 1 0 100%; /**/
+  margin: 0%;
+}
+
+.flex-contact {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;  /* defines alignment along main axis (flex-start, flex-end, center, space-between, space-around)*/
+  align-items: center;          /* defines alignment along cross axis (flex-start, flex-end, center, stretch, baseline)*/
+  align-content: space-between;    /* defines spacing of lines of cross axis if extra space (flex-start, flex-end, center, stretch,space-between, space-around)*/
+}
+
+#nav {
+  padding-right: 20px;
+}
+
+.nav-link {
+  font-size: 24px;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-family: 'Denk One', sans-serif;
+}
+
+.logo {
+  font-size: 36px;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.text-box{
+  margin: 10px;
+}
+
+.img-circle {
+/*    border-radius: 50%;*/
+  padding: 10px;
+}
+
+.form {
+  padding: 20px 40px;
+}
+
+
+/* Responsive Layouts/ Media queries*/
+@media only screen and (min-width: 521px) {
+  .text-box{
+      padding: 0 20px 0 50px;
+  }
+
+  .flex-portfolio-item1 {
+      /* flex child attributes*/
+      flex: 1 0 40%; /**/
+      margin: 0%;
+  }
+
+  .flex-portfolio-item2 {
+  /* flex child attributes*/
+  flex: 1 0 40%; /**/
+  margin: 1%;
+}
+}
+
+@media only screen and (max-width: 768px) {
+  p {
+      font-size: 18px;
+  }
+}

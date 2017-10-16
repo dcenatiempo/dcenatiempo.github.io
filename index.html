@@ -1,19 +1,109 @@
 <!DOCTYPE html>
+<!--     0         1         2         3         4         5         6         7       -->
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/layout.css">
+  <!-- Establishes a 1:1 ratio between DIPs and CSS pixels -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link CSS files to html doc-->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+  <!-- Link JavaScript file(s) to html doc -->
+    <script src="js/main.js"></script>
+  <!-- Link google fonts to html doc-->
+    <link href="https://fonts.googleapis.com/css?family=Denk+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bubbler+One" rel="stylesheet">
     <title>Devin Cenatiempo's Portfolio</title>
   </head>
-  <body>
-    <header>
-      <h1>Devin Cenatiempo's Portfolio</h1>
-    </header>
-    <main>
-    </main>
-    <footer>
-    </footer>
+  <!-- <body>
+       contains all visible content for page -->
+  <body class="flex-body">
+    <div id="small-nav" class="outer hidden">
+      <div class="inner">
+        <a class="nav-link" href="#about">about<a><br><br>
+        <a class="nav-link" href="#portfolio">portfolio</a><br><br>
+        <a class="nav-link" href ="#contact">contact</a>
+      </div>
+    </div>
+      <header class="flex-header">
+        <div class="flex-header2">
+          <h1 class="logo">devCen( )</h1>
+          <nav id="nav">
+            <div class="hamburger" onclick="myFunction()">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main class="flex-main">
+        <section id="about">
+          <h1>about</h1>
+          <div class="flex-portfolio">
+            <figure class="flex-portfolio-item">
+              <div class="text-box" >
+                <p>My name is Devin Cenatiempo.</p>
+                <p>I am an aspiring web developer currently pursuing a BS in Software Engineering from BYU-I.</p>
+                <p>I made my first program at the age of 14 when I made my own C++ version of Tron.</p>
+                <p>After a long hiadus (20 years!), I am making a comback.</p>
+                <p>Currently I have experience with:</p>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>jQuery</li>
+                  <li>C++</li>
+                </ul>
+              </div>
+            </figure>
+            <figure class="flex-portfolio-item1">
+              <img class="img-circle"  src="http://res.cloudinary.com/dcenatiempo/image/upload/v1497286705/devin_profile_d5cwsl.jpg">
+            </figure>
+          <div>
+        </section>
+        <section id="portfolio">
+          <h1>Portfolio</h1>
+          <div class="flex-portfolio">
+            <figure class="flex-portfolio-item2"><p data-height="399" data-theme-id="0" data-slug-hash="QgQGzR" data-default-tab="result" data-user="dcenatiempo" data-embed-version="2" data-pen-title="Basic Calculator" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/dcenatiempo/pen/QgQGzR/">Basic Calculator</a> by Devin Cenatiempo (<a href="https://codepen.io/dcenatiempo">@dcenatiempo</a>) on <a href="https://codepen.io">CodePen</a>.</p></figure>
+  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+            <figure class="flex-portfolio-item2"><p data-height="399" data-theme-id="dark" data-slug-hash="gWVzdm" data-default-tab="result" data-user="dcenatiempo" data-embed-version="2" data-pen-title="Tribute Page" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/dcenatiempo/pen/gWVzdm/">Tribute Page</a> by Devin Cenatiempo (<a href="https://codepen.io/dcenatiempo">@dcenatiempo</a>) on <a href="https://codepen.io">CodePen</a>.</p><script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script></figure>
+            <figure class="flex-portfolio-item2"><p data-height="399" data-theme-id="0" data-slug-hash="QgyzGJ" data-default-tab="result" data-user="dcenatiempo" data-embed-version="2" data-pen-title="Local Weather App" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/dcenatiempo/pen/QgyzGJ/">Local Weather App</a> by Devin Cenatiempo (<a href="https://codepen.io/dcenatiempo">@dcenatiempo</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script></figure>
+            <figure class="flex-portfolio-item2"><p data-height="399" data-theme-id="0" data-slug-hash="PjqaYo" data-default-tab="result" data-user="dcenatiempo" data-embed-version="2" data-pen-title="Random Quotes" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/dcenatiempo/pen/PjqaYo/">Random Quotes</a> by Devin Cenatiempo (<a href="https://codepen.io/dcenatiempo">@dcenatiempo</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script></figure>
+            <figure class="flex-portfolio-item2"><p data-height="399" data-theme-id="0" data-slug-hash="YQqqXL" data-default-tab="result" data-user="dcenatiempo" data-embed-version="2" data-pen-title="Wikipedia Search" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/dcenatiempo/pen/YQqqXL/">Wikipedia Search</a> by Devin Cenatiempo (<a href="https://codepen.io/dcenatiempo">@dcenatiempo</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script></figure>
+          </div>
+        </section>
+        <section id="contact">
+          <h1>contact</h1>
+          <div class="flex-contact">
+            <button><a target='_blank' href="https://www.instagram.com/coachdevin/">instagram</a></button>
+            <button><a target='_blank' href="https://twitter.com/devincenatiempo">twitter</a></button>
+            <button><a target='_blank' href="https://github.com/dcenatiempo">GitHub</a></button>
+            <button><a target='_blank' href="https://www.freecodecamp.com/dcenatiempo">freeCodeCamp</a></button>
+            <button><a target='_blank' href="https://www.linkedin.com/in/devincenatiempo/">Linkedin</a></button>
+          </div>
+          <div class="form">
+            <form method="post">
+              Name:<br>
+              <input type="text" name="name" required><br>
+              Email:<br>
+              <input type="email" name="email" required><br>
+              Message:<br>
+              <input type="text" name="message"><br>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </section>
+      </main>
+      <footer>
+      Designed and Coded by Devin Cenatiempo 2017
+      </footer>
   </body>
-</html>
+  <!-- link jQuery lib-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </html>
+  
+        
