@@ -64,7 +64,7 @@ a:hover{
 }
 
 /*** responsive hamburger menu ***********************************/
-.hamburger {
+#hamburger {
   display: inline-block;
   cursor: pointer;
 }
