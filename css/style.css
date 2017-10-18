@@ -3,10 +3,13 @@
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: 'Bubbler One', sans-serif;
-  font-size: 24px;
+  font-family: 'Averia Libre';
+  font-size: 20px;
+  color: rgb(101, 101, 101);
 }
-
+section {
+  padding-top: 30px; /* so when you click link to navigate to section, the heading is not hidden by header */
+}
 button {
       font-family: 'Bubbler One', sans-serif;
       padding: 0 25px;
@@ -21,12 +24,12 @@ button {
 img, embed, object, video {
   max-width:100%;
   min-width: 250px;
-
 }
 
 header {
   width: 100%;
   background-color: #3cc26d;
+  background: linear-gradient(to left, #4fdf82, #3cc26d, #2fb05c);
 }
 
 footer {
@@ -37,23 +40,27 @@ footer {
   padding: 20px 0;
 }
 
-h1 {
+h1 , h2{
   padding: 10px 0 0 50px;
-  font-family: 'Denk One', sans-serif;
+  font-family: 'Averia Libre';
+  color: rgb(80, 80, 80);
+  font-size:3em;
 }
-
-input {
-  width: 100%;
+h2 {
+  font-size: 2em;
 }
 
 nav {
   padding: 10px 0;
   color: white;
-  font-family: 'Denk One', sans-serif;
+  font-family: 'Averia Libre';
 }
 
 a, a:visited, a:link a:hover{
-  color: white;
+  color: rgb(255, 255, 255);
+}
+a:hover{
+  color: #22714c;
 }
 
 /*** responsive hamburger menu ***********************************/
@@ -73,8 +80,8 @@ a, a:visited, a:link a:hover{
 
 /* Rotate first bar */
 .change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-  transform: rotate(-45deg) translate(-9px, 6px) ;
+  -webkit-transform: rotate(-45deg) translate(-8.5px, 6px) ;
+  transform: rotate(-45deg) translate(-8.5px, 6px) ;
 }
 
 /* Fade out the second bar */
@@ -88,20 +95,30 @@ a, a:visited, a:link a:hover{
   transform: rotate(45deg) translate(-8px, -8px) ;
 }
 
-.hidden{
-  display: none;
-}
+
+/*
+#small-nav{
+  position: fixed;
+  width: 100%;
+  top: 60px;
+}*/
 
 .outer {
   position: fixed;
-  right: 0px;
   top: 60px;
-  background-color: #3cc26d;
+  width: 100%;
+  background: linear-gradient(to left, #4fdf82, #3cc26d, #2fb05c);
+  opacity: 1;
+  transition: visibility 0.1s, opacity 0.1s linear;
+}
+.hidden{
+  visibility: hidden;
+  opacity: 0;
 }
 .inner {
   position: relative;
-  margin-top: 20px !important;
-  margin-bottom: 20px !important;
+  margin: 20px auto;
+  width: 100px;
 }
 /*********************************************************/
 
@@ -114,7 +131,10 @@ a, a:visited, a:link a:hover{
     justify-content: flex-start;  /* defines alignment along main axis (flex-start, flex-end, center, space-between, space-around)*/
     align-items: center;          /* defines alignment along cross axis (flex-start, flex-end, center, stretch, baseline)*/
     align-content: flex-start;    /* defines spacing of lines of cross axis if extra space (flex-start, flex-end, center, stretch,space-between, space-around)*/
-    background-color: #d4c2a5;
+    background-color: #e2d7d3;
+/*
+    background: linear-gradient( to bottom right, #ebe7e0, #e3d2b9 )
+    */
 }
 
 .flex-header {
@@ -176,6 +196,7 @@ a, a:visited, a:link a:hover{
   justify-content: center;  /* defines alignment along main axis (flex-start, flex-end, center, space-between, space-around)*/
   align-items: center;          /* defines alignment along cross axis (flex-start, flex-end, center, stretch, baseline)*/
   align-content: space-between;    /* defines spacing of lines of cross axis if extra space (flex-start, flex-end, center, stretch,space-between, space-around)*/
+  margin: 20px;
 }
 
 #nav {
@@ -186,14 +207,16 @@ a, a:visited, a:link a:hover{
   font-size: 24px;
   padding-right: 20px;
   padding-left: 20px;
+  font-family: 'Averia Libre';
+  /*
   font-family: 'Denk One', sans-serif;
+  */
 }
 
-.logo {
-  font-size: 36px;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 0px;
+#logo {
+  margin: 10px;
+  height: 40px;
+  width: 200px;
 }
 
 .text-box{
@@ -202,11 +225,13 @@ a, a:visited, a:link a:hover{
 
 .img-circle {
 /*    border-radius: 50%;*/
-  padding: 10px;
+  padding: 20px;
+  float: right;
 }
 
-.form {
-  padding: 20px 40px;
+address {
+  padding: 10px;
+  margin-left: 60px;
 }
 
 
@@ -226,11 +251,15 @@ a, a:visited, a:link a:hover{
   /* flex child attributes*/
   flex: 1 0 40%; /**/
   margin: 1%;
-}
+  }
 }
 
 @media only screen and (max-width: 768px) {
   p {
       font-size: 18px;
+  }
+  h1, h2 {
+    text-align: center;
+    padding: 10px 0 0 0;
   }
 }
