@@ -111,6 +111,7 @@ nav {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  align-content: center;
 }
 #projects-nav a {
   display: block;
@@ -136,6 +137,11 @@ footer {
   padding: 5px 0;
   font-family: 'Averia Libre';
 }
+#fixed-footer{
+position: fixed;
+bottom: 0px;
+}
+
 main {
   margin-bottom: 60px; /* make room for project navigation*/
 }
