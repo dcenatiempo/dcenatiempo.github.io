@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Link CSS files to html doc-->
+    <link rel="stylesheet" type="text/css" href="./../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./../css/site-header-footer.css">
+  <!-- Link JavaScript file(s) to html doc -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/random-quote.js"></script>
+    <script src="./../js/project-site-header.js"></script>
+  <!-- Link google fonts to html doc -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Averia+Libre:700" rel="stylesheet">
+    <title>Random Quote Machine</title>
+  </head>
+<body class="center-flex">
+  <!-- expanded hamburger menu -->
+  <div id="small-nav" class="outer hidden">
+      <div class="inner">
+          <a class="nav-link" href="./../index.html#about">about<a><br><br>
+          <a class="nav-link" href="./../index.html#portfolio">portfolio</a><br><br>
+          <a class="nav-link" href="./../index.html#contact">contact</a>
+      </div>
+    </div>
+    <!-- site header -->
+    <header class="flex-header">
+      <div class="flex-header2">
+        <a href="./../index.html"><img src="./../images/dcenatiempo-logo.svg" alt="dcenatiempo.com logo" id="logo"></a>
+        <nav id="header-nav">
+          <div id="hamburger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="padding">
+      <h1 class="header">Random Tech Quotes</h1>
+      <section class="flex-left-column">
+        <div class="dos-prompt-screen">
+          <div class="message dos-prompt-text">message will go here</div>
+          <div class="author dos-prompt-text">author will go here</div>
+          <div class="permalink dos-prompt-text">permanlink will go here</div>
+        </div>
+      </section>
+      <section>
+        <button id="getMessage" class="button">next quote</button>
+        <button id="tweet" class="button">tweet</button>
+      </section>
+    </main>
+    <nav id="projects-nav">
+      <a id="left-nav" title="previous project">&lt;prev project</a>
+      <a href="https://github.com/dcenatiempo/random-quote-machine" target="_blank" title="view code in GitHub">
+        <img src="./../images/github.svg" id="github-logo" alt="view code in GitHub"></a>
+      <a id="right-nav" title="next project">next project&gt;</a>
+    </nav>
+    <footer>
+        &copy; Devin Cenatiempo 2017
+    </footer>
+  </body>
+</html>
