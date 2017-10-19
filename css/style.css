@@ -93,6 +93,7 @@ h2 {
 .profile-img {
   padding: 20px;
   float: right;
+  max-width: 100%;
 }
 
 address {
