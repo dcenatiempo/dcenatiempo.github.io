@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/simon-game.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <title>Simon Game</title>
+    <!-- header links -->
+    <link rel="stylesheet" type="text/css" href="./../css/site-header-footer.css">
+    <script src="./../js/project-site-header.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Averia+Libre:700" rel="stylesheet">
+    <!-- end header links -->
+  </head>
+  <body>
+    <!-- header markup -->
+    <!-- expanded hamburger menu -->
+    <div id="small-nav" class="outer hidden">
+        <div class="inner">
+            <a class="nav-link" href="./../index.html#about">about<a><br><br>
+            <a class="nav-link" href="./../index.html#portfolio">portfolio</a><br><br>
+            <a class="nav-link" href="./../index.html#contact">contact</a>
+        </div>
+      </div>
+      <!-- site header -->
+      <header class="flex-header">
+        <div class="flex-header2">
+          <a href="./../index.html"><img src="./../images/dcenatiempo-logo.svg" alt="dcenatiempo.com logo" id="logo"></a>
+          <nav id="header-nav">
+            <div id="hamburger">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- end header markup -->
+    <div class="screen">
+      <div class="board">
+        <div class="center">
+          <div class="control-container">
+            <div class="control-logo">
+              simon
+            </div>
+            <div class="control">
+              <div id="score">--</div>
+            </div>
+          <div class="control">
+            <div class="bcont">
+              <button class="small-button" id="start"></button>
+              start
+            </div>
+            <div class="bcont">
+              <button class="small-button" id="strict"></button>
+              strict
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="paddle-container">
+        <div class="paddles">
+          <svg height ="100%" width="100%" viewBox="0 0 230 230">
+            <path id="green0"
+                   d="M 0 217
+                      L 116 217
+                      A 118 118, 0,0,1, 217 119.6
+                      L 217 0
+                      A 230 230, 0, 0, 0, 0 217"/>
+          </svg>
+        </div>
+        <div class="paddles">
+          <svg height ="100%" width="100%" viewBox="0 0 230 230">
+            <path id="red1"
+                   d="M 230 217
+                      L 116 217
+                      A 118 118, 0,0,0, 13 119.6
+                      L 13 0
+                      A 230 230, 0, 0, 1, 230 217"/>
+          </svg>
+        </div>
+        <div class="paddles">
+          <svg height ="100%" width="100%" viewBox="0 0 230 230">
+            <path id="yellow2"
+                   d="M 0 13
+                      L 116 13
+                      A 118 118, 0,0,0, 217 119.6
+                      L 217 230
+                      A 230 230, 0, 0, 1, 0 13"/>
+          </svg>
+        </div>
+        <div class="paddles">
+          <svg height ="100%" width="100%" viewBox="0 0 230 230">
+            <path id="blue3"
+                   d="M 13 230
+                      L 13 119.6
+                      A 118 118, 0,0,0, 116, 13
+                      L 230 13
+                      A 230 230, 0, 0, 1, 13 230"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- footer markup -->
+    <nav id="projects-nav">
+      <a id="left-nav" title="previous project">&lt;prev project</a>
+      <a href="https://github.com/dcenatiempo/simon-game" target="_blank" title="view code in GitHub">
+        <img src="./../images/github.svg" id="github-logo" alt="view code in GitHub"></a>
+      <a id="right-nav" title="next project">next project&gt;</a>
+    </nav>
+    <footer id="fixed-footer">
+      &copy; Devin Cenatiempo 2017
+    </footer>
+    <!-- end footer markup -->
+  </body>
+</html>
