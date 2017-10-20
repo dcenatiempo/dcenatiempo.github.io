@@ -25,12 +25,12 @@ header {
   /*flex child attributes*/
   width: 100%;
   max-width: 960px;
+  align-items: center;
 }
 #small-nav {
   z-index: 10;
 }
 nav {
-  padding: 10px 0;
   color: white;
   font-family: 'Averia Libre';
 }
@@ -109,19 +109,23 @@ nav {
 /*** site footer ***************************************************/
 #projects-nav {
   position: fixed;
-  bottom: 30px;
+  bottom: 28px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   align-content: center;
+  background: linear-gradient(rgba(255, 255, 255, .0),rgba(255, 255, 255, .75), white);
+  width: 100%;
 }
 #projects-nav a {
   display: block;
   font-family: 'Averia Libre';
-  color: rgba(55, 55, 55, 0.5); 
+  color: rgba(55, 55, 55, 0.8); 
   text-decoration: none;
   font-size: 1.5em;
+  text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.968);
+  padding: 30px 0 10px 0;
 }
 #left-nav {
   text-align: right;

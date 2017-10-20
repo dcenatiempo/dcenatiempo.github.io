@@ -43,9 +43,6 @@
   margin-bottom: 5px;
 }
 
-.message {
-}
-
 .dos-prompt-screen {
   background-color: blue;
   color: white;
@@ -59,12 +56,6 @@
   color: white;
   font-size: 14px;
   font-family: 'Press Start 2P', monospace;
-}
-
-.author {
-}
-
-.permalink {
 }
 
 .header {
@@ -87,4 +78,12 @@
 
 main {
   max-width: 800px;
+}
+@media only screen and (max-width: 565px) {
+  .header {
+    margin: 5px 0 10px 0;
+  }
+  .button {
+    margin: 15px 10px 30px 0;
+  }
 }
