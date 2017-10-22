@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/wikipedia-search.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+SC" rel="stylesheet">
+    <title>Wikipedia Search</title>
+<!-- header links -->
+    <link rel="stylesheet" type="text/css" href="./../css/site-header-footer.css">
+    <script src="./../js/project-site-header.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Averia+Libre:700" rel="stylesheet">
+<!-- end header links -->
+  </head>
+  <body>
+<!-- header markup -->
+    <!-- expanded hamburger menu -->
+    <div id="small-nav" class="outer hidden">
+        <div class="inner">
+            <a class="nav-link" href="./../index.html#about">about<a><br><br>
+            <a class="nav-link" href="./../index.html#portfolio">portfolio</a><br><br>
+            <a class="nav-link" href="./../index.html#contact">contact</a>
+        </div>
+      </div>
+      <!-- site header -->
+      <header class="flex-header">
+        <div class="flex-header2">
+          <a href="./../index.html"><img src="./../images/dcenatiempo-logo.svg" alt="dcenatiempo.com logo" id="logo"></a>
+          <nav id="header-nav">
+            <div id="hamburger">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+          </nav>
+        </div>
+      </header>
+<!-- end header markup -->
+    <main class="flex-single-col">
+      <h1>WikipediA</h1>
+      <h2>The Free Encyclopedia Searcher</h2> 
+      <div id="form">
+        <div id="search-container">
+          <input id="search-input" type="text" placeholder="Search"></input>
+        </div>
+      </div>
+      <div class="button-container flex-row">
+        <button id="reg-search">Wikipedia Search</button>
+        <button id="random-search">Random Article</button>
+      </div>
+      <section id="search-results"></section>
+    </main>
+<!-- footer markup -->
+<nav id="projects-nav">
+    <a id="left-nav" title="previous project">&lt;prev project</a>
+    <a href="https://github.com/dcenatiempo/wikipedia-search" target="_blank" title="view code in GitHub">
+      <img src="./../images/github.svg" id="github-logo" alt="view code in GitHub"></a>
+    <a id="right-nav" title="next project">next project&gt;</a>
+  </nav>
+  <footer id="fixed-footer">
+    &copy; Devin Cenatiempo 2017
+  </footer>
+<!-- end footer markup -->
+  </body>
+</html>
