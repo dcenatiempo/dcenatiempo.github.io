@@ -3,17 +3,45 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./../css/normalize.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./js/basic-calc.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Denk+One" rel="stylesheet">
     <title>Basic Calculator</title>
+<!-- header links -->
+    <link rel="stylesheet" type="text/css" href="./../css/site-header-footer.css">
+    <script src="./../js/project-site-header.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Averia+Libre:700" rel="stylesheet">
+<!-- end header links -->
   </head>
   <body>
+<!-- header markup -->
+    <!-- expanded hamburger menu -->
+    <div id="small-nav" class="outer hidden">
+        <div class="inner">
+            <a class="nav-link" href="./../index.html#about">about<a><br><br>
+            <a class="nav-link" href="./../index.html#portfolio">portfolio</a><br><br>
+            <a class="nav-link" href="./../index.html#contact">contact</a>
+        </div>
+      </div>
+      <!-- site header -->
+      <header class="flex-header">
+        <div class="flex-header2">
+          <a href="./../index.html"><img src="./../images/dcenatiempo-logo.svg" alt="dcenatiempo.com logo" id="logo"></a>
+          <nav id="header-nav">
+            <div id="hamburger">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+          </nav>
+        </div>
+      </header>
+<!-- end header markup -->
     <main id="calc-body">
-      <header class="logo">dCenatiempo( )</header>
+      <section class="calc-logo"></section>
       <section class="screen-container">
         <div id="l-scrn">
         </div>
@@ -51,5 +79,16 @@
         </div>
       </section>
     </main>
+<!-- footer markup -->
+    <nav id="projects-nav">
+      <a id="left-nav" title="previous project">&lt;prev project</a>
+      <a href="https://github.com/dcenatiempo/basic-calculator" target="_blank" title="view code in GitHub">
+        <img src="./../images/github.svg" id="github-logo" alt="view code in GitHub"></a>
+      <a id="right-nav" title="next project">next project&gt;</a>
+    </nav>
+    <footer id="fixed-footer">
+      &copy; Devin Cenatiempo 2017
+    </footer>
+<!-- end footer markup -->
   </body>
 </html>
