@@ -105,21 +105,28 @@ function display() {
     // remove sign if there is one
     if (integer[0] === '-')
       var sign = integer.shift();
-    // if number is too big for screen, truncate decimal portion 
-    if (integer.length + decimal.length > 11)
-      decimal = decimal.slice(0,11-integer.length);
-    // if integer portion is 1,000+ add commas
-    if (integer.length > 3 ) {
-      var loop = Math.floor(integer.length/3.1);
-      for ( var i = 0; i < loop; i++)
-        integer.splice((integer.length-(3+3*i+i)),0,",");
+    // if integer portion is too big for screen, use scientific notation
+    if (integer.length > 11)
+      scrDisplay = tempTerm.toExponential(6);
+    else {
+      // if number is too big for screen, truncate decimal portion
+      if (integer.length + decimal.length > 11) {
+        var limit = 11-integer.length;
+        decimal = decimal.slice(0,limit < 0 ? 0 : limit);
+      }
+      // if integer portion is 1,000+ add commas
+      if (integer.length > 3 ) {
+        var loop = Math.floor(integer.length/3.1);
+        for ( var i = 0; i < loop; i++)
+          integer.splice((integer.length-(3+3*i+i)),0,",");
+      }
+      if (sign) // add sign back in if there is one
+        integer.unshift(sign);
+      // put it all together again for display
+      integer = integer.join('');
+      decimal = decimal.join('');
+      scrDisplay = integer + '.' + decimal;
     }
-    if (sign) // add sign back in if there is one
-      integer.unshift(sign);
-    // put it all together again for display
-    integer = integer.join('');
-    decimal = decimal.join('');
-    scrDisplay = integer + '.' + decimal;
   }
   // number must be regular integer
   else {
