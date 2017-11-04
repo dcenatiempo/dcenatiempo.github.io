@@ -36,23 +36,23 @@ var usSilverCoins = [
 
 var usGoldCoins = [
   {
-    "name": "1849 - 1889 $1.00",
+    "name": "1849-1889 $1.00",
     "metal content": 0.048364,
     "qty": 0
   },{
-    "name": "1840 - 1929 $2.50",
+    "name": "1840-1929 $2.50",
     "metal content": 0.120935,
     "qty": 0
   },{
-    "name": "1839 - 1929 $5.00",
+    "name": "1839-1929 $5.00",
     "metal content": 0.241870,
     "qty": 0
   },{
-    "name": "1838 - 1933 $10.00",
+    "name": "1838-1933 $10.00",
     "metal content": 0.483747,
     "qty": 0
   },{
-    "name": "1849 - 1933 $20.00",
+    "name": "1849-1933 $20.00",
     "metal content": 0.967494,
     "qty": 0
   }

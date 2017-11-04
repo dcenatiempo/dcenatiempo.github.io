@@ -110,6 +110,7 @@ function silverPopUp() {
   
   container.appendChild(h2Total);
   container.appendChild(nextBtn);
+  updateSilverTotal();
 }
 
 function goldPopUp() {
@@ -177,6 +178,7 @@ function goldPopUp() {
   
   container.appendChild(h2Total);
   container.appendChild(nextBtn);
+  updateGoldTotal();
 }
 
 function otherPopup() {
