@@ -1,0 +1,17 @@
+button {
+  background-color: dodgerblue;
+  color: white;
+  height: 40px;
+  font-size: 20px;
+}
+body {
+  padding: 20px;
+}
+.code {
+  background-color: lightgray;
+  font-family: monospace;
+  padding: 10px;
+}
+h1, h2, h3 {
+  font-family: helvetica;
+}

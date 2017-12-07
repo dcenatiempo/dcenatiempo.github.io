@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="./webcomponents-lite.js"></script><link rel="import" href="./alert-modal.html">
+    <link rel="stylesheet" href="./style.css">
+    <title>Week 13</title>
+  </head>
+  <body>
+    <h1>Week 13: Web Technology</h1>
+    <h2>Native Web Components</h2>
+    <p>Web components are made up of 4 technologies:</p>
+    <ol>
+      <li>Custom Elements</li>
+      <li>HTML Imports</li>
+      <li>HTML Templates</li>
+      <li>Shadow DOM</li>
+    </ol>
+    <p>Because all of these technologies are not supported fully in all browsers, polyfils must be used.</p>
+    <p>This page has been tested in Chrome, Firefox, Safari, and Opera. Behavior in other browsers is unpredictable, so please view using a supported browser</p>
+    <h3>My web component: &lt;alert-modal&gt;</h3>
+    <p>The web component I designed is the &lt;alert-modal&gt; component. As the name suggest, it is meant as a replacement for the built in JavaScript alert(). To start using this component, you must first import it (and the polyfill) to the page like so:</p>
+    <p class="code">&lt;script src="./webcomponents-lite.js">&lt;/script><br>&lt;link rel="import" href="./alert-modal.html"></p>
+    <p>Then just insert the alert-modal tag in the page's HTML. By placing text between the tags, the user can create their own alert message:</p>
+    <p class="code">&lt;alert-modal&gt;Custom Alert Goes Here&lt;/alert-modal&gt;</p>
+    <p>The alert is shown by using using the "visible" property. In this case, JavaScript is used to add the "visible" property to the element when the blue button is clicked below. To close the alert, press the red "Dismiss" button on the alert.</p>
+    <p class="code">&lt;alert-modal visible&gt;Custom Alert Goes Here&lt;/alert-modal&gt;</p>
+    <button id="alert-button" visible>Click on me to see Alert Modal</button>
+    <alert-modal>Custom Alert Goes Here</alert-modal>
+  </body>
+  <script src="main.js"></script>
+</html>

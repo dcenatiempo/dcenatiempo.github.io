@@ -1,0 +1,163 @@
+<template id="alert-modal-tmpl">
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+    .circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+      background-color: red;
+      color: white;
+      font-size: 30px;
+      font-weight:800;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .message {
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+    main * {
+      font-family: helvetica;
+    }
+    main {
+      background-color: #fff;
+      border-color: red;
+      border-radius: 10px;
+      width: 200px;
+      padding-top:1px;
+      box-shadow: 4px 4px 20px #ccc;
+    }
+    button {
+      background-color: red;
+      border: none;
+      width: 100%;
+      padding: 10px 0;
+      border-radius: 0;
+      font-size: 24px;
+      color: white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    #top {
+      margin: 20px;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+    }
+    :host {
+      display: none;
+    }
+    :host([visible]) {
+      display: block;
+      position: fixed;
+      top: 25%;
+      left: 50%;
+      transform: translate(-25%, -50%);
+    }
+  </style>
+  <main>
+    <section id="top">
+      <div class="circle">!</div>
+      <p class="message"><slot></slot></p>
+    </section>
+    <button>Dismiss</button>
+  </main>
+</template>
+
+<script>
+  // self executing script
+  (function() {
+    // set thisImportDoc to the this document - not the importing document
+    let thisImportDoc = document.currentScript.ownerDocument;
+
+    class AlertModal extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      /** defines which attributes will trigger the attributeChangedCallback function **/
+      static get observedAttributes() {
+        return ["visible"]; // an aray of attributes to observe
+      }
+      
+      /** not sure what this does **/
+      static get template() {
+        if (!this._template) {
+          this._template = thisImportDoc.querySelector("#alert-modal-tmpl");
+        }
+        return this._template;
+      }
+
+      /** custom element lifecyle functions **/
+      // called when element connected to page
+      connectedCallback() {
+        console.log("alert-modal connected to page");
+        let shadowRoot = this.attachShadow({mode: "open"});
+        let tmpl = AlertModal.template;
+        console.log(tmpl)
+        shadowRoot.appendChild(
+          document.importNode(tmpl.content, true)
+        );
+        
+        // add a click event to close alert
+        var closeAlert = shadowRoot.querySelector("button");
+        closeAlert.addEventListener("click", e=> {
+          this.visible = false;
+          console.log("closed alert-modal");
+        });
+
+        // If the browser doesn't natively support ShadowDOM, we have
+        // to polyfill the styling mechanism for the component
+        const supportsNativeShadowDOM = !!HTMLElement.prototype.attachShadow;
+        if (!supportsNativeShadowDOM) {
+          console.log("Browser does not support shadow dom");
+          ShadyCSS.applyStyle(this);
+        }
+      }
+
+      // called when element is removed from page
+      disconnectedCallback() {
+        console.log("alert-modal disconnected to page");
+      }
+      
+      // called when element imported into page
+      adoptedCallback() {
+        console.log("alert-modal adopted in page");
+      }
+      
+      // called when element attribute changes
+      attributeChangedCallback(name, oldValue, newValue) {
+        console.log("alet-modal attr: " + name + " changed from '"
+                    + oldValue + "' to '" + newValue + "'");
+      }
+
+      /** getters & setters for visible attribute **/
+      get visible() {
+        return this.hasAttribute('visible');
+      }
+
+      set visible(val) {
+        if (val) {
+          this.setAttribute('visible', '');
+        } else {
+          this.removeAttribute('visible');
+        }
+      }
+    } // end class AlertModal
+
+    // This is only needed for browsers that don't yet have native ShadowDOM 
+    // support. When native support is present this call does nothing
+    ShadyCSS.prepareTemplate(AlertModal.template, "alert-modal");
+
+    
+    //create custom element "alert-modal" based on behavior defined in "AlertModal" class
+    customElements.define("alert-modal", AlertModal);
+  })(); // end self executing script
+
+</script>
+
