@@ -141,6 +141,51 @@ function swipeItem (e) {
     }
 };
 
+function swipeItemT (e) {
+    swipeItemMove.item = e.target;
+    swipeItemMove.y = e.clientY - e.offsetY;
+    swipeItemMove.x = e.clientX;
+    swipeItemMove.xOffset = e.offsetX;
+    swipeItemMove.yOffset = e.clientY - e.layerY;
+    swipeItemMove.xStart = e.target.getBoundingClientRect().left;
+    swipeItemMove.item.style.position = 'absolute';
+    swipeItemMove.item.style.left = `${swipeItemMove.x - swipeItemMove.xOffset}px`;
+    swipeItemMove.item.style.top = `${swipeItemMove.y}px`;
+    
+    document.addEventListener('touchmove',swipe);
+    
+    document.addEventListener('touchend',function(e){
+        var currX = e.clientX - e.layerX;
+        var start = swipeItemMove.xStart;
+        var distance = currX - start;
+        var rect = swipeItemMove.item.parentNode.getBoundingClientRect();
+        var width = rect.right - rect.left;
+        var percent = distance/width
+        //console.log(percent)
+        // has item moved far enough to the right?
+        if (percent > .2) {
+            removeItem(swipeItemMove.item.parentNode.id);
+            let parent = swipeItemMove.item.parentNode.parentNode;
+            console.log(parent)
+            let child = swipeItemMove.item.parentNode;
+            parent.removeChild(child)
+        }
+        // NO? Put it back to normal
+        document.removeEventListener('touchmove',swipe);
+      
+      swipeItemMove.item.setAttribute('style', '');
+    });
+
+    function swipe(e) {
+        var left = e.clientX-e.offsetX;
+        if (left < swipeItemMove.xStart) ;
+        else {
+            swipeItemMove.item.style.left = `${e.clientX - swipeItemMove.xOffset}px`;
+        }
+    }
+};
+
+
 function dragItem (e) {
     verticleItemMove.item = e.target.parentNode;
     verticleItemMove.y = e.clientY - e.layerY;
@@ -177,6 +222,42 @@ function dragItem (e) {
     }
 }
 
+function dragItemT (e) {
+    verticleItemMove.item = e.target.parentNode;
+    verticleItemMove.y = e.clientY - e.layerY;
+    verticleItemMove.x = e.clientX - e.layerX;
+    verticleItemMove.yOffset = e.layerY;
+    verticleItemMove.item.style.position = 'absolute';
+    verticleItemMove.item.style.left = `${verticleItemMove.x}px`;
+    verticleItemMove.item.style.top = `${verticleItemMove.y}px`;
+    
+    document.addEventListener('touchmove',drag);
+    
+    document.addEventListener('touchend',function(e){
+        var currY = e.clientY - e.layerY;
+        verticleItemMove.item.parentNode.removeChild(verticleItemMove.item);
+        var list = document.querySelector('.to-do-list');
+        var position = 1;
+        for (let i=1; i<list.childNodes.length; i++) {
+            //console.log(list.childNodes)
+            let rect = list.childNodes[i].getBoundingClientRect();
+            //console.log(currY, rect.top)
+            if (currY > rect.top) {
+                position++
+            }
+        }
+        moveItem(verticleItemMove.item.id, position-1);
+        list.insertBefore(verticleItemMove.item, list.childNodes[position])
+        document.removeEventListener('touchmove',drag);
+      
+      verticleItemMove.item.setAttribute('style', '');
+    });
+
+    function drag(e) {
+        verticleItemMove.item.style.top = `${e.clientY - verticleItemMove.yOffset}px`;
+    }
+}
+
 
 /***************************************************
  * DOM
@@ -191,11 +272,13 @@ function buildItem(item) {
     span.appendChild(title);
     span.classList.add('drop-zone-child');
     span.addEventListener( 'mousedown', swipeItem);
+    span.addEventListener( 'touchstart', swipeItemT);
     
     handle.appendChild(document.createTextNode('↕'));
     handle.classList.add('handle');
     handle.classList.add('drop-zone-child');
     handle.addEventListener( 'mousedown', dragItem )
+    handle.addEventListener( 'touchstart', dragItemT )
 
     li.id = item.id;
     li.classList.add('to-do-item');
