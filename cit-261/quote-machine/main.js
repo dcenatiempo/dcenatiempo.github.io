@@ -7,7 +7,7 @@
 *******************************************************************************/
 
 // define the empty quote object
-let quote = {
+var quote = {
     quote: "",
     author: "",
     permalink: "",
@@ -25,13 +25,13 @@ document.querySelector('#tweet').addEventListener('click', tweet);
 
 
 // changes html to match new quote
-let changeQuote = function(data) {
+var changeQuote = function(data) {
     document.querySelector('.message').textContent = `C:\\> ${data.quote}`;
     document.querySelector('.author').innerHTML = `<br> - ${data.author}`;
     document.querySelector('.permalink').innerHTML = `<br><a class="dos-prompt-text" href=" ${data.permalink} "target="_blank">C:\\> Permalink</a>`;
 }
 
-let getRandomQuote = function() {
+var getRandomQuote = function() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -43,7 +43,7 @@ let getRandomQuote = function() {
     xhttp.send();
 };
 
-function processJSON (text) {
+var processJSON = function(text) {
     var data = JSON.parse(text);
     console.log(data);
     var string = JSON.stringify(data);
@@ -78,7 +78,7 @@ let getRandomQuote = function() {
 */
 
 // open up tweet box in new window
-let tweet = function() {
+var tweet = function() {
     var url = quote.tweetURL;
     window.open(url.concat(quote.quote.split(" ").join("+")), "_blank");
 };
