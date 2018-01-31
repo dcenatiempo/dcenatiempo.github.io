@@ -1,0 +1,9 @@
+#myCanvas {
+  border:2px solid #000000;
+}
+.header {
+  width: 1200px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
