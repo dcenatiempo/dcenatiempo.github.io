@@ -1,0 +1,8 @@
+img {
+  width: 200px;
+}
+.center-flex {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}

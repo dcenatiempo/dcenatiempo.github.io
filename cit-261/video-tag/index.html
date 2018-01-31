@@ -1,0 +1,32 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Averia+Libre:700" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body class="center-flex">
+  <h1>&lt;Video> and &lt;Audio> Demo</h1>
+  <figure class="center-flex">
+      <caption>Here is a autoplaying video</caption>
+    <video width="400px" controls autoplay>
+        <source type="video/mp4" src="http://res.cloudinary.com/dcenatiempo/video/upload/v1517402203/647597071_k5mefj.mp4">
+        Your browser does not support HTML5 video.
+    </video>
+  </figure>
+  <figure class="center-flex">
+    <caption>Click the image to play some audio</caption>
+    <img src="./baby.jpg" onclick="playAudio()">
+    <audio>
+        <source type="audio/mp3" src="http://res.cloudinary.com/dcenatiempo/video/upload/v1517403487/Baby_Boy_Laugh-Mike_Koenig-1622212130_swn4dy.mp3">
+        Your browser does not support the audio tag.
+    </audio>
+  </figure>
+</body>
+<script type="text/javascript" src="./main.js"></script>
+</html>
