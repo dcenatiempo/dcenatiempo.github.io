@@ -2,8 +2,8 @@
   box-sizing: border-box;
   font-family: Helvetica, sans-serif
 }
-* {
-  overscroll-behavior: none;
+body {
+  overscroll-behavior: contain;
 }
 
 h1 {
