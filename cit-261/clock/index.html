@@ -1,0 +1,39 @@
+<!-- 8) Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript
+11) Designing, Defining, and Triggering CSS3 Transitions without Custom Libraries (Thought Library)
+12) Designing, Defining, and Triggering CSS3 Transforms without Custom Libraries (Thought Library)
+13) Designing, Defining, and Triggering CSS3 Animations without Custom Libraries (Thought Library) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <section>
+    <h1>Analog Clock</h1>
+    <h2>A study of Animations and Transitions</h2>
+    <p>The Second hand uses Animation with 5 keyframes to animate both the rotation and the shadow</p>
+    <p>The Minute and Hour hand use transitions triggered when JavaScript changes the <span class="code">transform: rotate()</span> style property and the <span class="code">box-shadow</span> style</p>
+    <p>Notice the clock is responsive, and everything (including shadows) scales to fit the window</p>
+    <p>Click the clock to "Bump" it and see another animation</p>
+  </section>
+  <section class="face">
+    <div class="hour-container">
+      <div class="hour hand">
+      </div>
+    </div>
+    <div class="minute-container">
+      <div class="minute hand">
+      </div>
+    </div>
+    <div class="second-container">
+      <div class="second hand"></div>
+      <div class="circle"></div>
+      <div class="rect"></div>
+    </div>
+  </section>
+</body>
+<script type="text/javascript" src="./main.js"></script>
+</html>
