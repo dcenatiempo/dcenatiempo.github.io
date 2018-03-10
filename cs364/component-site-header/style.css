@@ -1,0 +1,12 @@
+main {
+  height: 50px;
+  width: 600px;
+  margin-bottom: 10px;
+}
+main header {
+  display: grid;
+  grid-template-columns: 9fr 1fr 1fr;
+}
+img {
+  width: 25px;
+}

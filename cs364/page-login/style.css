@@ -1,0 +1,12 @@
+main section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login {
+  height: 300px;
+  width: 200px;
+  border: solid;
+  padding: 20px;
+  position: absolute;
+}

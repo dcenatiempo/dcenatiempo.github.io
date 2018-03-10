@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+
+body {
+  background-color: white;
+}
+main {
+  margin: 50px 0;
+  background-color: lightgray;
+  position: relative;
+}
+main.page {
+  min-height: 500px;
+  width: 900px;
+}
+main header {
+  border: solid;
+  height: 50px;
+  padding: 10px;
+}
+main section {
+  min-height: 400px;
+  border-left: solid;
+  border-right: solid;
+}
+main footer {
+  border: solid;
+  height: 50px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  padding: 10px;
+}
+main footer::before {
+  content: 'Footer';
+}
+button {
+  font-size: 1rem;
+  padding: .5rem;
+}
