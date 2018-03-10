@@ -1,0 +1,21 @@
+main {
+  border: solid;
+  padding: 10px;
+  height: 70px;
+  width: 360px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  align-items: center;
+}
+main span {
+  font-size: 1.25rem;
+}
+main.simple {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  height: 140px;
+}
+main.simple span:nth-child(2) {
+  font-size: 3rem;
+}

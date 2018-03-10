@@ -1,0 +1,18 @@
+main {
+  width: 210px;
+  border: solid;
+}
+
+ul {
+  padding: 10px;
+}
+li {
+  list-style: none;
+  padding: 10px 0;
+}
+li.new {
+  font-weight: bold;
+}
+li.new::before {
+  content: '*';
+}
