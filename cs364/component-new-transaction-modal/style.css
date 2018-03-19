@@ -1,0 +1,17 @@
+main {
+  width: 320px;
+  min-height: 200px;
+  border: solid;
+  background-color: lightgray;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-gap: 10px 10px;
+  padding: 10px;
+}
+
+li {
+  list-style: none;
+}
+.span-2 {
+  grid-column: 1/3;
+}

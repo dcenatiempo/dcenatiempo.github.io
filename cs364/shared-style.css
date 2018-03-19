@@ -44,3 +44,12 @@ button {
 .apr {
   font-size: 1rem;
 }
+.component {
+  border: solid;
+  background-color: lightgray;
+  padding: 10px;
+  text-align: center;
+}
+input {
+  font-size: 1rem;
+}

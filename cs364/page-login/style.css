@@ -6,7 +6,6 @@ main section {
 .login {
   height: 300px;
   width: 200px;
-  border: solid;
-  padding: 20px;
   position: absolute;
+  padding: 20px;
 }
