@@ -1,0 +1,17 @@
+main {
+  border: solid;
+}
+main header {
+  border: none;
+  border-bottom: solid;
+}
+main section {
+  border: solid;
+  width: calc(100% - 20px);
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+}
+h3 {
+  text-align: center;
+}

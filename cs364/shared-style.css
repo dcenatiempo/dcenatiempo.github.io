@@ -13,7 +13,7 @@ main {
 }
 main.page {
   min-height: 500px;
-  width: 900px;
+  max-width: 900px;
 }
 main header {
   border: solid;
@@ -21,7 +21,6 @@ main header {
   padding: 10px;
 }
 main section {
-  min-height: 400px;
   border-left: solid;
   border-right: solid;
 }
