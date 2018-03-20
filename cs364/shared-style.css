@@ -40,6 +40,12 @@ main footer::before {
 button {
   font-size: 1rem;
   padding: .5rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: rgb(230, 230, 230)
+}
+button:hover {
+  background-color: lightgray;
 }
 .apr {
   font-size: 1rem;
@@ -50,6 +56,7 @@ button {
   padding: 10px;
   text-align: center;
 }
-input {
+input, select {
   font-size: 1rem;
+  background-color: white;
 }

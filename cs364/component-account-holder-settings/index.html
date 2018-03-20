@@ -9,8 +9,8 @@
 <body>
   <h1>Account Holder Settings</h1>
   <main>
-    <span class="heading">Name:</span><span>Jennifer</span>
-    <span class="heading">Interest Rate:</span><span>35%<sub>APR</sub></span>
+    <span class="heading">Name:</span><input type="text" value="Jennifer">
+    <span class="heading">Interest Rate:</span><input type="text" value="35%">
     <span class="span-1-2">
       <span class="heading">Negative Balances:</span>
       <ul class="negative">
@@ -19,12 +19,13 @@
         <li><input name="negative" type="radio"><span>Extend Credit</span><input disabled value="10%" type="text"></li>
       </ul>
     </span>
+    <span class="heading">Recurring Transactions:</span>
     <span class="span-1-2">
-      <span class="heading">Recurring Transactions:</span>
-      <ul class="recurring">
-        <li><span>Allowance</span><span>Weekly</span><span>$10</span></li>
-        <li><span>Phone Bill</span><span>Monthly</span><span>-$20</span></li>
-      </ul>
+      
+      <div class="transactions component span-2">
+        <span class="heading">Transactions List Component</span>
+        <span>Filtered by Recurring Transactions in this account</span>
+      </div>
     </span>
     <span class="span-1-2">
       <span class="heading">Home Page View:</span>
@@ -34,6 +35,7 @@
         <li><input name="view" type="radio">Full</li>
       </ul>
     </span>
+    <button class="span-1-2">Edit/Save</button>
   </main>
   <footer>
       <a href="../index.html">Home</a>
