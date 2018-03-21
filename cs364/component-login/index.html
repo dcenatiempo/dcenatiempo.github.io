@@ -17,6 +17,48 @@
     <button class="span">Facebook</button>
     <button class="span">Twitter</button>
   </main>
+  <h3>Endpoints:</h3>
+  <ul>
+    <li>/login
+      <ul>
+        <li>Description: After client validation, credentials are posted to server to be authenticated</li>
+        <li>Method: Post</li>
+        <li>Parameters Passed: (userName, password)</li>
+        <li>Expected Return:
+          <ul>
+            <li>Success: Serve up Banker or Account Holder page, cookie with authentication token &amp; userId</li>
+            <li>Failure: {error message}</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>/login/register
+      <ul>
+        <li>Description: After client validation, credentials are posted to server to be authenticated. Server will either create new user, or return reason why it couldn't</li>
+        <li>Method: Post</li>
+        <li>Parameters Passed: (userName, password)</li>
+        <li>Expected Return:
+          <ul>
+            <li>Success: Serve up Banker or Account Holder page, cookie with authentication token &amp; userId</li>
+            <li>Failure: {error message}</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>/login/oauth
+      <ul>
+        <li>Description: Login/Register with twitter/facebook/google</li>
+        <li>Method: Post</li>
+        <li>Parameters Passed: (?)</li>
+        <li>Expected Return:
+          <ul>
+            <li>Success: Serve up Banker or Account Holder page, cookie with authentication token &amp; userId</li>
+            <li>Failure: {error message}</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
   <footer>
     <a href="../index.html">Home</a>
   </footer>

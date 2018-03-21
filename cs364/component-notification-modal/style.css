@@ -1,7 +1,7 @@
 ul {
   padding: 10px;
 }
-li {
+.drop-down li {
   list-style: none;
   padding: 10px 0;
 }

@@ -9,19 +9,49 @@
 <body>
   <h1>Notification Modal</h1>
   <div class="container">
-      <div class="header">
-        <header><img src="../images/bell.png"></header>
-        <div class="drop-down">
-          <ul>
-            <li class="new">Notification Message 1</li>
-            <li class="new">Notification Message 2</li>
-            <li>Notification Message 3</li>
-            <li>Notification Message 4</li>
-            <li>Notification Message 5</li>
-          </ul>
-        </div>
+    <div class="header">
+      <header><img src="../images/bell.png"></header>
+      <div class="drop-down">
+        <ul>
+          <li class="new">Notification Message 1</li>
+          <li class="new">Notification Message 2</li>
+          <li>Notification Message 3</li>
+          <li>Notification Message 4</li>
+          <li>Notification Message 5</li>
+        </ul>
       </div>
     </div>
+  </div>
+  <h3>Endpoints:</h3>
+  <ul>
+    <li>/notification/{userId}
+      <ul>
+        <li>Description: When the user clicks the notification icon, the client fetches a list of recent notifications</li>
+        <li>Method: Get</li>
+        <li>Parameters Passed: userId</li>
+        <li>Expected Return:
+          <ul>
+            <li>Success: JSON object with array of recent messages</li>
+            <li>Failure: {error message}</li>
+          </ul>
+        </li>
+      </ul>
+      </li>
+      <li>/notification/{userId}
+        <ul>
+          <li>Description: When the user views/clicks on a notification, the client posts to the server that the notification was read</li>
+          <li>Method: Post</li>
+          <li>Parameters Passed: userId, dismissedNotificationId</li>
+          <li>Expected Return:
+            <ul>
+              <li>Success: {success message}</li>
+              <li>Failure: {error message}</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </li>
+  </ul>
   <footer>
     <a href="../index.html">Home</a>
   </footer>

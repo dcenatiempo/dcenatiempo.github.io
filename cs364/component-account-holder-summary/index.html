@@ -30,6 +30,35 @@
     <span>Jennifer</span>
     <span>$153.50</span>
   </main>
+  <h3>Endpoint Calls:</h3>
+  <ul>
+    <li>account-holder/{accountHolderId}/summary/
+      <ul>
+        <li>Description: the account holder summary is displayed many places</li>
+        <li>Method: Get</li>
+        <li>Parameters Passed: (accountHolderUserId)</li>
+        <li>Expected Return:
+          <ul>
+            <li>Success: JSON object with username, accountBalance, interestRate</li>
+            <li>Failure: {error message}</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>account-holder/{accountHolderId}/summary/{category}
+      <ul>
+        <li>Description: the account holder category summary when user drills into a specific category</li>
+        <li>Method: Get</li>
+        <li>Parameters Passed: (accountHolderUserId, category)</li>
+        <li>Expected Return:
+          <ul>
+            <li>Success: JSON object with username, categoryBalance</li>
+            <li>Failure: {error message}</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
   <footer>
     <a href="../index.html">Home</a>
   </footer>

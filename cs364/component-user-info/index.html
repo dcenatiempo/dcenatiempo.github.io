@@ -25,6 +25,45 @@
       <span></span><button>Change Password</button>
     </main>
   </div>
+  <h3>Endpoints:</h3>
+  <ul>
+    <li>/logout
+      <ul>
+        <li>Method: Get</li>
+        <li>Parameters Passed: ?</li>
+        <li>Expected Return:
+          <ul>
+            <li>Success: serve up the login page</li>
+            <li>Failure: {error message}</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>/user-info
+      <ul>
+        <li>Method: Get</li>
+        <li>Parameters Passed: (userId)</li>
+        <li>Expected Return:
+          <ul>
+            <li>Success: {name, email}</li>
+            <li>Failure: {error message}</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>/user-info
+      <ul>
+        <li>Method: Post</li>
+        <li>Parameters Passed: (userId, JSON with updated fields)</li>
+        <li>Expected Return:
+          <ul>
+            <li>Success: {name, email}</li>
+            <li>Failure: {error message}</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
 
   <footer>
     <a href="../index.html">Home</a>

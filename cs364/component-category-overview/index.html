@@ -16,6 +16,35 @@
     <span>Bike</span><span>$60.00</span>
     <button class="span-2">+ Add New Category</button>
   </main>
+  <h3>Endpoints:</h3>
+  <ul>
+    <li>/category/list/{accountHolderId}
+      <ul>
+        <li>Description: returns a list of categories for a specific account holder</li>
+        <li>Method: Get</li>
+        <li>Parameters Passed: (accountHolderId)</li>
+        <li>Expected Return:
+          <ul>
+            <li>JSON object with an array of categories with {category, balance</li>
+            <li>Failure: {error message}</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>/category/create/{accountHolderId}/{category}
+      <ul>
+        <li>Description: add a new category</li>
+        <li>Method: Post</li>
+        <li>Parameters Passed: (accountHolderId, category)</li>
+        <li>Expected Return:
+          <ul>
+            <li>Success: {success message}</li>
+            <li>Failure: {error message}</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
   <footer>
     <a href="../index.html">Home</a>
   </footer>

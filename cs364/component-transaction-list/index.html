@@ -18,6 +18,22 @@
     <span>2/14/18</span><span>General</span><span>Valentines Gift</span><span>-$5.00</span>
     <button class="span-4">+ Add New Transaction</button>
   </main>
+  <h3>Endpoints:</h3>
+  <ul>
+    <li>/transaction/list/{accountHolderId}/{range}
+      <ul>
+        <li>Description: returns a list of transactions for a user for a specific date range or number of transactions</li>
+        <li>Method: Get</li>
+        <li>Parameters Passed: (accountHolderId, range)</li>
+        <li>Expected Return:
+          <ul>
+            <li>Success: JSON object with an array of transactions with: {transactionId, date, category, memo, ammount}</li>
+            <li>Failure: {error message}</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
   <footer>
     <a href="../index.html">Home</a>
   </footer>

@@ -24,6 +24,35 @@
     <span>Freddie</span><span>-$20.00</span><span>80% <span class="apr">APR</span></span>
     <button class="span-3">+ Add New Account Holder</button>
   </main>
+  <h3>Endpoints:</h3>
+  <ul>
+    <li>/account-holder/list/{bankerId}
+      <ul>
+        <li>Description: similar to account holder summary, but this endpoint allows one fetch instead of a fetch for each account</li>
+        <li>Method: Get</li>
+        <li>Parameters Passed: (bankderId)</li>
+        <li>Expected Return:
+          <ul>
+            <li>JSON object with an array of account holders with {accountHolderId, name, accountBalance, interestRate}</li>
+            <li>Failure: {error message}</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>/account-holder/create
+      <ul>
+        <li>Description: If the banker wants to create a new account holder...</li>
+        <li>Method: Post</li>
+        <li>Parameters Passed: (userName)</li>
+        <li>Expected Return:
+          <ul>
+            <li>Success: {success message}</li>
+            <li>Failure: {error message}</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
   <footer>
       <a href="../index.html">Home</a>
   </footer>

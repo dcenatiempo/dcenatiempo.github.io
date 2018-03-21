@@ -10,6 +10,7 @@
   <h1>New/Edit Transaction Modal</h1>
   <main>
     <span>Date:</span><input type="date">
+    <span>Memo:</span><textarea rows="4"></textarea>
     <span>Category:</span>
       <select>
         <option value="general">General</option>
@@ -17,8 +18,8 @@
         <option value="mission">Mission</option>
         <option value="bike">Bike</option>
       </select>
-    <span>Memo:</span><textarea rows="4"></textarea>
     <span>Amount:</span><input type="number">
+    <span>Split:</span><input type="checkbox">
     <span>Recurring:</span><input type="checkbox">
     <ul class="span-2">
       <li><input type="radio" name="recurring" value="daily">Daily</li>
@@ -27,6 +28,48 @@
     </ul>
     <button class="span-2">Edit/Save</button>
   </main>
+  <h3>Endpoints:</h3>
+  <ul>
+    <li>/transaction/{accountHolderId}/{transactionId}
+      <ul>
+        <li>Description: returns transaction details to be either viewed or edited. There are kinds of transactions. a single transaction, or a recurring transaction template. A single transaction only has one category and ammount, and does not have a recurringObject. A template will have an array of one or more category/ammount pairs, representing a split transaction (think a transfer from one category to another, or a recurring deposit where 90% goes into one category and 10% goes into tithing category)</li>
+        <li>Method: Get</li>
+        <li>Parameters Passed: (accountHolderId, transactionId)</li>
+        <li>Expected Return:
+          <ul>
+            <li>Success: JSON object with {transactionId, date, memo, [category,ammount], recurringObject}</li>
+            <li>Failure: {error message}</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>/transaction/edit/{accountHolderId}/{transactionId}
+      <ul>
+        <li>Description: for editing single transactions or transaction templates</li>
+        <li>Method: Post</li>
+        <li>Parameters Passed: (accountHolderId, transactionId, newTransactionObject)</li>
+        <li>Expected Return:
+          <ul>
+            <li>Success: {success message}</li>
+            <li>Failure: {error message}</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>/transaction/new/{accountHolderId}/{transactionId}
+      <ul>
+        <li>Description: adding new single transactions or transaction templates</li>
+        <li>Method: Post</li>
+        <li>Parameters Passed: (accountHolderId, transactionId, newTransactionObject)</li>
+        <li>Expected Return:
+          <ul>
+            <li>Success: {success message}</li>
+            <li>Failure: {error message}</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
   <footer>
     <a href="../index.html">Home</a>
   </footer>
