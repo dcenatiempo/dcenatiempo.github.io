@@ -24,7 +24,7 @@ header {
   justify-content: space-between;
   /*flex child attributes*/
   width: 100%;
-  max-width: 960px;
+  max-width: 1400px;
   align-items: center;
 }
 #small-nav {
