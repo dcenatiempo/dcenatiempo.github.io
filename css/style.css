@@ -7,9 +7,11 @@
   font-size: 20px;
   color: rgb(101, 101, 101);
 }
+
 section {
   padding-top: 30px; /* so when you click link to navigate to section, the heading is not hidden by header */
 }
+
 button {
       font-family: 'Averia Libre', sans-serif;
       padding: 0 25px;
@@ -20,6 +22,7 @@ button {
       border-radius: 3px;
       color: white;
 }
+
 button a{
   color: white;
 }
@@ -30,60 +33,43 @@ h1 , h2{
   color: rgb(80, 80, 80);
   font-size:3em;
 }
+
 h2 {
   font-size: 2em;
 }
 
 /* main body elements will always stack*/
-.flex-body {
-    display: flex;                /* signifies this is a flex parent*/
-/*    flex-direction: column;       /* defines main axis (row, row-reverse, column, column-reverse)*/
-/*    flex-wrap: wrap;              /* defines wraping properties (nowrap, wrap, wrap-reverse)*/
-    flex-flow: column nowrap;       /* combination of flex-direction & flex-wrap */
-    justify-content: flex-start;  /* defines alignment along main axis (flex-start, flex-end, center, space-between, space-around)*/
-    align-items: center;          /* defines alignment along cross axis (flex-start, flex-end, center, stretch, baseline)*/
-    align-content: flex-start;    /* defines spacing of lines of cross axis if extra space (flex-start, flex-end, center, stretch,space-between, space-around)*/
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
     background-color: #e2d7d3;
 }
 
-.flex-main {
-  /* flex parent attributes*/
-  display: flex;
-  flex-flow: column wrap;
-  /*flex child attributes*/
+main {
   width: 100%;
-  max-width: 960px;
   background-color: white;
+  padding: 0 20px;
 }
 
-.flex-portfolio {
-  /* flex parent attributes*/
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;  /* defines alignment along main axis (flex-start, flex-end, center, space-between, space-around)*/
-  align-items: flex-start;          /* defines alignment along cross axis (flex-start, flex-end, center, stretch, baseline)*/
-  /*align-content: stretch;    /* defines spacing of lines of cross axis if extra space (flex-start, flex-end, center, stretch,space-between, space-around)*/
+#about > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
-.flex-portfolio-item {
-  /* flex child attributes*/
-  flex: 1 0 40%; /**/
-  margin: 0%;
-}
-
-.flex-portfolio-item1, .flex-portfolio-item2 {
-  /* flex child attributes*/
-  flex: 1 0 100%; /**/
-  margin: 0%;
+#portfolio > .portfolio-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 }
 
 .flex-contact {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;  /* defines alignment along main axis (flex-start, flex-end, center, space-between, space-around)*/
-  align-items: center;          /* defines alignment along cross axis (flex-start, flex-end, center, stretch, baseline)*/
-  align-content: space-between;    /* defines spacing of lines of cross axis if extra space (flex-start, flex-end, center, stretch,space-between, space-around)*/
-  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
 }
 
 .text-box{
@@ -92,7 +78,7 @@ h2 {
 
 .profile-img {
   padding: 20px;
-  float: right;
+  /* float: right; */
   max-width: 100%;
 }
 
@@ -100,25 +86,36 @@ address {
   padding: 10px;
   margin-left: 60px;
 }
+figure {
+  margin: 1rem;
+}
+#portfolio figure:not(.codepen) {
+  height: 399px;
+  border: 1px solid rgb(101, 101, 101);
+}
+#portfolio figure:not(.codepen) > h3 {
+  height: 50px;
+  width: 100%;
+  margin: 0;
+  padding: 11px;
+  color: white;
+  background: #3d3d3e;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+  font-weight: normal;
+  font-size: 1.1em;
+}
+a.weather-app {
+  display: block;
+  background-image:url("../images/weather-app-screen-shot.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: green;
+  background-size: cover;
+  width: 100%;
+  height: calc(100% - 50px);
+}
 
 /* Responsive Layouts/ Media queries*/
-@media only screen and (min-width: 521px) {
-  .text-box{
-      padding: 0 20px 0 50px;
-  }
-
-  .flex-portfolio-item1 {
-      /* flex child attributes*/
-      flex: 1 0 40%; /**/
-      margin: 0%;
-  }
-
-  .flex-portfolio-item2 {
-  /* flex child attributes*/
-  flex: 1 0 40%; /**/
-  margin: 1%;
-  }
-}
 
 @media only screen and (max-width: 768px) {
   p {
@@ -127,5 +124,10 @@ address {
   h1, h2 {
     text-align: center;
     padding: 10px 0 0 0;
+  }
+}
+@media only screen and (max-width: 420px) {
+  main {
+    padding: 0;
   }
 }
