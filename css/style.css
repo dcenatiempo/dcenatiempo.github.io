@@ -106,6 +106,9 @@ figure {
   font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
   font-weight: normal;
   font-size: 1.1em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .portfolio-list > figure > a {
   display: block;
@@ -173,4 +176,43 @@ figure > a.wikipedia {
 }
 figure > a.wikipedia::before {
   content: 'Another clean, simple application. Search for anything!\A\A Skills Used: AJAX, Responsive Layout';
+}
+figure > a.game-of-life {
+  background-image:url("../images/game-of-life-screen-shot.png");
+}
+figure > a.game-of-life::before {
+  content: 'A classic programming challenge with my own twist! Fully responsive interactive controls. A great time waster!\A\A Skills Used: React, Responsive Layout, Algorithms';
+}
+figure > a.recipe {
+  background-image:url("../images/recipe-box-screen-shot.png");
+}
+figure > a.recipe::before {
+  content: 'A simple React application to store recipes to localStorage. \A\A Skills Used: React, Responsive Layout, Browser Storage';
+}
+figure > a.rogue-like {
+  background-image:url("../images/rogue-like-screen-shot.png");
+}
+figure > a.rogue-like::before {
+  content: 'One of my biggest projects. You are the blue hero. Kill all the red monsters. Level up and trade in the yellow market. Find the purple gates to descend deeper into the dungeon! \A\A Skills Used: React, Redux, Responsive Layout, Algorithms, Procedural Content Generation ';
+}
+figure > a.meteorite {
+  background-image:url("../images/meteorite-screen-shot.png");
+}
+figure > a.meteorite::before {
+  content: 'A fun visualization project, mapping meteorite crashes accross the glob \A\A Skills Used: D3.js, Responsive Layout, Fetch, SVG';
+}
+
+@media screen and (max-width: 420px) {
+  main {
+    padding: 0;
+  }
+  h1 {
+    padding-left: 40px;
+    font-size: 48px;
+  }
+  h2 {
+    padding-left: 0;
+    font-size: 32px;
+    text-align: center;
+  }
 }
