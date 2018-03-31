@@ -8,10 +8,14 @@
 }
 
 .screen {
+  top: 47%;
   width: 80vmin;
   height: 80vmin;
   margin: 20px auto;
   margin-bottom: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
 }
 
 .board {
