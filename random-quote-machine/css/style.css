@@ -50,6 +50,8 @@
   font-family: 'Press Start 2P', monospace;
   padding: 20px;
   border-radius: 10px;
+  width: calc(100% - 40px);
+  max-width: 500px;
 }
 
 .dos-prompt-text {

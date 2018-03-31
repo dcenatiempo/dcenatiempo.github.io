@@ -3,7 +3,7 @@
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: 'Averia Libre';
+  font-family: 'helvetica';
   font-size: 20px;
   color: rgb(101, 101, 101);
 }
@@ -53,6 +53,7 @@ main {
   max-width: 1400px;
   background-color: white;
   padding: 0 20px;
+  margin-bottom: 0;
 }
 
 #about > div {
@@ -71,6 +72,7 @@ main {
   justify-content: center;
   align-items: center;
   align-content: space-between;
+  margin: 20px 0;
 }
 
 .text-box{
@@ -105,30 +107,70 @@ figure {
   font-weight: normal;
   font-size: 1.1em;
 }
-a.weather-app {
+.portfolio-list > figure > a {
   display: block;
-  background-image:url("../images/weather-app-screen-shot.jpeg");
+  position: relative;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: green;
   background-size: cover;
   width: 100%;
   height: calc(100% - 50px);
 }
-
-/* Responsive Layouts/ Media queries*/
-
-@media only screen and (max-width: 768px) {
-  p {
-      font-size: 18px;
-  }
-  h1, h2 {
-    text-align: center;
-    padding: 10px 0 0 0;
-  }
+.portfolio-list > figure > a::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  opacity: 0;
+  transition: opacity .5s;
+  padding: 20px;
+  white-space: pre-wrap
 }
-@media only screen and (max-width: 420px) {
-  main {
-    padding: 0;
-  }
+.portfolio-list > figure > a:hover::before {
+  opacity: 1;
+}
+figure > a.weather-app {
+  background-image:url("../images/weather-app-screen-shot.jpeg");
+}
+figure > a.weather-app::before {
+  content: 'This is a mobile first responsive PWA\A\A Skills Used: service workers, AJAX, Transitions, Animations Touch Events, Browser Storage, Geolocation API, Responsive Layout, Grid';
+}
+figure > a.simon-game {
+  background-image:url("../images/simon-screen-shot.png");
+}
+figure > a.simon-game::before {
+  content: 'This blast from the past uses recorded sounds from an actual Simon device. \A\A Technologies Used: SVG, Responsive Layout, Flex, jQuery';
+}
+figure > a.tic-tac-toe {
+  background-image:url("../images/tic-tac-toe-screen-shot.png");
+}
+figure > a.tic-tac-toe::before {
+  content: 'This game features 3 difficulty levels and an unbeatable AI. Implements a min-max algorithm that I spent way too long figuring out.  \A\A Skills Used: jQuery, Algorithms';
+}
+figure > a.markdown {
+  background-image:url("../images/markdown-screen-shot.png");
+}
+figure > a.markdown::before {
+  content: 'This is a simple React application. I used create-react-app to build. Also uses marked.js to parse the markdown. \A\A Skills Used: React, Responsive Layout';
+}
+figure > a.quotes {
+  background-image:url("../images/quotes-screen-shot.png");
+}
+figure > a.quotes::before {
+  content: 'A very simple AJAX application. I had fun with the design on this one. \A\A Skills Used: VanillaJS, Fetch, Twitter API';
+}
+figure > a.calculator {
+  background-image:url("../images/calculator-screen-shot.png");
+}
+figure > a.calculator::before {
+  content: 'A clean calculator based on the cheap handhelds that everyone has used at one point or another.\A\A Skills Used: Algorithms, Proceedural Programming';
+}
+figure > a.wikipedia {
+  background-image:url("../images/wikipedia-screen-shot.png");
+}
+figure > a.wikipedia::before {
+  content: 'Another clean, simple application. Search for anything!\A\A Skills Used: AJAX, Responsive Layout';
 }

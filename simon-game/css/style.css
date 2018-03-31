@@ -1,24 +1,19 @@
 * {
-  -webkit-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: 'Roboto Condensed', sans-serif;
-  color: #262626;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #262626;
 }
-body{
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  padding-bottom: 90px;
-}
+
 .screen {
-  width: 700px;
-  height: 700px;
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  width: 80vmin;
+  height: 80vmin;
+  margin: 20px auto;
+  margin-bottom: 0;
 }
+
 .board {
   position: relative;
   width: 100%;
@@ -26,20 +21,22 @@ body{
   background-color: #262626;
   border-radius: 150%;
   margin: auto;
-  padding: 4%;
-  box-shadow: 5px 5px 20px gray;
+  padding: 4vmin;
+	box-shadow: 1.2vmin 1.2vmin 5vmin gray;
 }
+
 .center {
   position: absolute;
   left: 30.4%;
   top: 30.9%;
   border: none;
   border-radius: 100%;
-  background-color: ;
+  background-color: transparent;
   border-color: yellow;
   height: 40%;
   width: 40%;
 }
+
 .control-container {
   height: 100%;
   width: 100%;
@@ -51,15 +48,16 @@ body{
   height: 40%;
   width: 100%;
   text-align: center;
-  font-size: 4em;
+  font-size: 8vmin;
   padding: 10%;
 }
 .control{
   height: 30%;
   width: 100%;
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
+
 .paddle-container {
   border: none;
   border-color: yellow;
@@ -70,6 +68,7 @@ body{
   justify-content: space-between;
   align-content: space-between;
 }
+
 .paddles {
   height: 50%;
   width: 50%;
@@ -79,67 +78,52 @@ body{
 #green0 {
   fill: #00b359;
 }
+
 #red1 {
   fill: #cc3300;
 }
+
 #yellow2 {
   fill: #e6e600; 
 }
+
 #blue3 {
   fill: #1a75ff;
 }
+
 #score {
-  background-color: black;
-  color: red;
-  height: 70%;
-  width: 21%;
-  border-radius: 10%;
-  font-size: 3em;
-  text-align: center;
-  padding: 0%;
-  margin: auto;
+	background-color: black;
+	color: red;
+	height: 70%;
+	width: 21%;
+	border-radius: 10%;
+	font-size: 7vmin;
+	text-align: center;
+	padding: 0%;
+	margin: auto;
 }
+
 .pressed {
-  background-color: orange;
+	background-color: orange;
 }
+
 .small-button {
-  height: 30%;
-  width: 30%;
-  margin: 0 auto;
-  border-radius: 100%;
+	height: 30%;
+	width: 30%;
+	margin: 0 auto;
+	border-radius: 100%;
 }
+
 .small-button:active {
-  background-color: orange;
+	background-color: orange;
 }
+
 .bcont {
-  height: 100%;
-  width: 30%;
-  text-align: center;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-}
-@media only screen and (max-width: 700px) {
-  .screen {
-    width: 500px;
-    height: 500px;
-  }
-  .control-logo {
-    font-size: 3em;
-  }
-  #score {
-    font-size: 2.2em;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .screen {
-    width: 350px;
-    height: 350px;
-  }
-    .control-logo {
-    font-size: 2em;
-  }
-  #score {
-    font-size: 1.6em;
-  }
+	height: 100%;
+	width: 30%;
+	text-align: center;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	font-size: 3.3vmin;
 }
