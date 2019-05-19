@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.117740982d491bc5fd6d60388f27cd1b.js"
+  "precache-manifest.9ade97a7642acfdb8dc80705a7418a2f.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "price-point"});
