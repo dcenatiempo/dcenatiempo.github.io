@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <title>Camera Test</title>
+    <link href="./static/css/main.da8bbbd2.css" rel="stylesheet">
+    <!-- header links -->
+    <link rel="stylesheet" href="./../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./../css/site-header-footer.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./../js/project-site-header.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Averia+Libre:700" rel="stylesheet">
+    <!-- end header links -->
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- header markup -->
+    <!-- expanded hamburger menu -->
+    <div id="small-nav" class="outer hidden">
+      <div class="inner">
+          <a class="nav-link" href="./../index.html#about">about<a><br><br>
+          <a class="nav-link" href="./../index.html#portfolio">portfolio</a><br><br>
+          <a class="nav-link" href="./../index.html#contact">contact</a>
+      </div>
+    </div>
+    <!-- site header -->
+    <header class="flex-header">
+      <div class="flex-header2">
+        <a href="./../index.html"><img src="./../images/dcenatiempo-logo.svg" alt="dcenatiempo.com logo" id="logo"></a>
+        <nav id="header-nav">
+          <div id="hamburger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header markup -->
+    <div style="padding: 16px">
+      <h1>Upload Image</h1>
+      <h3>If on mobile device, this should access the device camera</h3>
+      <form id="form1" runat="server" style="display: flex; flex-flow: column;">
+        <input id="img-input" type="file" accept="image/*" capture="camera">
+        <img id="img-output" src="#" alt="your image" style="width: 80%; max-width: 500px; margin: auto;"/>
+      </form>
+    </div>
+    <!-- footer markup -->
+      <footer id="fixed-footer">
+          &copy; Devin Cenatiempo 2017
+      </footer>
+    <!-- end footer markup -->
+    <script type="text/javascript" src="./static/js/main.3d47f431.js"></script>
+    <script>
+      function readURL(e) {
+        const input = e.target;
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = (e) => {
+              document.querySelector('#img-output').setAttribute('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+      }
+
+      document.querySelector("#img-input").onchange = readURL;
+    </script>
+  </body>
+  </html>
