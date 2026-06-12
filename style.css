@@ -130,7 +130,7 @@ h3 {
 
 .skills div {
   display: grid;
-  grid-template-columns: 7.5rem 1fr;
+  grid-template-columns: 8.5rem 1fr;
   gap: 1rem;
   padding: 0.4rem 0;
   border-bottom: 1px solid var(--rule);
@@ -147,6 +147,10 @@ h3 {
 .skills dd {
   margin: 0;
   color: var(--muted);
+}
+
+.education {
+  margin: 0 0 0.5rem;
 }
 
 footer {
