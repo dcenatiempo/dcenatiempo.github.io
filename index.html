@@ -1,141 +1,120 @@
 <!DOCTYPE html>
-<!--     0         1         2         3         4         5         6         7       -->
-<html>
-  <head>
-    <meta charset="utf-8">
-  <!-- Establishes a 1:1 ratio between DIPs and CSS pixels -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Link CSS files to html doc-->
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/site-header-footer.css">
-    <link rel="stylesheet" href="./css/style.css">
-  <!-- Link JavaScript file(s) to html doc -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./js/home-site-header.js"></script>
-  <!-- Link google fonts to html doc -->
-    <link href="https://fonts.googleapis.com/css?family=Averia+Libre:700" rel="stylesheet">
-    <title>Devin Cenatiempo's Portfolio</title>
-  </head>
-  <body>
-    <!-- expanded hamburger menu -->
-    <div id="small-nav" class="outer hidden">
-      <div class="inner">
-        <a class="nav-link" href="#about">about<a><br><br>
-        <a class="nav-link" href="#portfolio">portfolio</a><br><br>
-        <a class="nav-link" href ="#contact">contact</a>
-      </div>
-    </div>
-    <!-- site header -->
-    <header class="flex-header">
-      <div class="flex-header2">
-        <img src="./images/dcenatiempo-logo.svg" alt="dcenatiempo.com logo" id="logo">
-        <nav id="header-nav">
-          <div id="hamburger">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- all content between header and footer -->
-    <main>
-      <section>
-        <h1>Hi, I'm Devin.</h1>
-        <h1>I am a full stack web developer.</h1>
-      </section>
-      <section id="about">
-        <h2>&lt;about&gt;</h2>
-        <div>
-          <figure>
-            <div class="text-box" >
-              <p>Currently, I work at Inside Real Estate in Draper, Utah.</p>
-              <p>Creating beautiful, responsive, easy-to-use web applications and websites is my passion.</p>
-              <p>I am experienced with:</p>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React Native</li>
-                <li>Vue</li>
-                <li>Polymer</li>
-                <li>Laravel/PHP</li>
-                <li>Node</li>
-              </ul>
-            </div>
-          </figure>
-          <figure>
-            <img class="profile-img"  src="http://res.cloudinary.com/dcenatiempo/image/upload/v1497286705/devin_profile_d5cwsl.jpg">
-          </figure>
-        </div>
-      </section>
-      <section id="portfolio">
-        <h2>&lt;portfolio&gt;</h2>
-        <div class="portfolio-list">
-          <figure>
-            <h3>Weather App</h3>
-            <a class="weather-app" target="_blank" href="https://devins-weather-app.herokuapp.com/"></a>
-          </figure>
-          <figure>
-            <h3>Classic 80's Simon Game</h3>
-            <a class="simon-game" target="_blank" href="./simon-game/index.html"></a>
-          </figure>
-          <figure>
-            <h3>Tic-Tac-Toe</h3>
-            <a class="tic-tac-toe" target="_blank" href="./tic-tac-toe/index.html"></a>
-          </figure>
-          <figure>
-            <h3>Markdown Previewer</h3>
-            <a class="markdown" target="_blank" href="./markdown-previewer/index.html"></a>
-          </figure>
-          <figure>
-            <h3>Random Quote Machine</h3>
-            <a class="quotes" target="_blank" href="./random-quote-machine/index.html"></a>
-          </figure>
-          <figure>
-            <h3>Basic Calculator</h3>
-            <a class="calculator" target="_blank" href="./basic-calculator/index.html"></a>
-          </figure>
-          <figure>
-            <h3>Wikipedia Search</h3>
-            <a class="wikipedia" target="_blank" href="./wikipedia-search/index.html"></a>
-          </figure>
-          <figure>
-            <h3>Rogue-Like</h3>
-            <a class="rogue-like" target="_blank" href="https://codepen.io/dcenatiempo/pen/ayWxBR/"></a>
-          </figure>
-          <figure>
-            <h3>Conway's Game of Life</h3>
-            <a class="game-of-life" target="_blank" href="https://codepen.io/dcenatiempo/pen/zdOzrL/"></a>
-          </figure>
-          <figure>
-            <h3>Recipe Box</h3>
-            <a class="recipe" target="_blank" href="https://codepen.io/dcenatiempo/pen/awrgMZ/"></a>
-          </figure>
-          <figure>
-            <h3>Meteorite Crash Sites</h3>
-            <a class="meteorite" target="_blank" href="https://codepen.io/dcenatiempo/pen/QMxVJQ/"></a>
-          </figure>
-        </div>
-      </section>
-      <section id="contact">
-        <h2>&lt;contact&gt;</h2>
-        <address>
-          Devin Cenatiempo</br>
-          Salt Lake City, UT</br>
-          (480) 277-1160</br>
-          dcenatiempo@gmail.com</br>
-        </address>
-        <div class="flex-contact">
-          <button><a target='_blank' href="https://www.instagram.com/coachdevin/">instagram</a></button>
-          <button><a target='_blank' href="https://twitter.com/devincenatiempo">twitter</a></button>
-          <button><a target='_blank' href="https://github.com/dcenatiempo">GitHub</a></button>
-          <button><a target='_blank' href="https://www.linkedin.com/in/devincenatiempo/">Linkedin</a></button>
-        </div>
-      </section>
-    </main>
-    <footer>
-      Designed &amp; Coded by Devin Cenatiempo 2017
-    </footer>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devin Cenatiempo — Staff Software Engineer</title>
+  <meta name="description" content="Devin Cenatiempo is a Staff Software Engineer building mobile and full-stack applications — React Native, web, and AI-driven development.">
+  <meta name="author" content="Devin Cenatiempo">
+  <link rel="canonical" href="https://dcenatiempo.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dcenatiempo.com/">
+  <meta property="og:title" content="Devin Cenatiempo — Staff Software Engineer">
+  <meta property="og:description" content="A decade of building software: full-stack, mobile, and now AI-driven development.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <h1>Devin Cenatiempo</h1>
+    <p class="tagline">Staff Software Engineer</p>
+    <p class="bio">
+      I've spent the better part of a decade building software people rely on —
+      starting full-stack with Vue and Laravel, going deep on mobile with React
+      Native, and now leading AI-driven development: building the agent skills,
+      prompts, and workflows that let a small team ship what used to take a much
+      bigger one.
+    </p>
+    <nav class="links" aria-label="Contact links">
+      <a href="mailto:dcenatiempo@gmail.com">Email</a>
+      <a href="https://github.com/dcenatiempo">GitHub</a>
+      <a href="https://www.linkedin.com/in/devincenatiempo">LinkedIn</a>
+      <a href="resume.pdf">Resume&nbsp;(PDF)</a>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience</h2>
+
+      <article class="job">
+        <header>
+          <h3>BILL <span class="muted">(acquired Divvy)</span></h3>
+          <p class="role">Staff Software Engineer · Fall 2025–present<br>
+            <span class="muted">Senior Software Engineer · 2021–2025 · remote</span></p>
+        </header>
+        <ul>
+          <li>Leading the AI-driven rewrite of BILL's native Android and iOS apps into React Native — architecting agent skills, prompting workflows, and documentation that let a 3–5 person team replace the output of a much larger traditional effort.</li>
+          <li>Built a proof of concept duplicating 90%+ of the app's UI and navigation, presented it to the CTO, and secured executive buy-in.</li>
+          <li>Refactored the entire React Native app to a modular clean architecture used across 6+ squads.</li>
+          <li>Rebuilt critical features natively in Android with Kotlin, Jetpack Compose, and Dagger Hilt.</li>
+          <li>Built an in-app AI assistant and MCP server enabling agent-driven app interaction.</li>
+          <li>Promoted to Staff Engineer and retained as critical talent through a 30% company-wide reduction.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <header>
+          <h3>Inside Real Estate</h3>
+          <p class="role">Lead React Native Developer · 2019–2021<br>
+            <span class="muted">Full Stack Software Engineer · 2018–2019 · Draper, UT</span></p>
+        </header>
+        <ul>
+          <li>Drove the app store rating from the mid-2s to 4.4/5.0 across a dozen white-label app variants.</li>
+          <li>Implemented the full push notification pipeline: Laravel, Firebase, and React Native.</li>
+          <li>Worked across a Vue frontend, Laravel backend, and MySQL/Redshift/Elasticsearch data stores.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <header>
+          <h3>FamilySearch.org</h3>
+          <p class="role">Front End Engineer Intern · 2018 · <span class="muted">Lehi, UT</span></p>
+        </header>
+        <ul>
+          <li>Built large-scale web applications with Polymer web components, bringing responsive designs to life alongside UX designers.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Side Projects</h2>
+
+      <article class="project featured">
+        <h3><a href="https://farmgeni.us">farmgeni.us</a></h3>
+        <p>Farm management software for small farms — tracking animals, land, and
+          the daily work of running a farm, with an AI assistant built in.
+          Next.js, PostgreSQL, React Native, and the Vercel AI SDK.</p>
+      </article>
+
+      <article class="project">
+        <h3><a href="https://github.com/dcenatiempo/tandoor-cli">tandoor-cli</a></h3>
+        <p>A CLI that bridges AI agents to the Tandoor recipe manager —
+          ~2,000 downloads in its first month.</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <dl class="skills">
+        <div><dt>Languages</dt><dd>TypeScript · JavaScript · Kotlin · PHP · SQL</dd></div>
+        <div><dt>Mobile</dt><dd>React Native · Jetpack Compose · Android SDK · Dagger Hilt</dd></div>
+        <div><dt>Web</dt><dd>Next.js · React · Node.js · AdonisJS · Laravel · Vue · GraphQL · REST</dd></div>
+        <div><dt>AI</dt><dd>Vercel AI SDK · MCP · Agent Skills · Claude</dd></div>
+        <div><dt>Tooling</dt><dd>Fastlane · Git · Firebase · Drizzle · PostgreSQL · Vercel</dd></div>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <p>Get in touch — <a href="mailto:dcenatiempo@gmail.com">dcenatiempo@gmail.com</a></p>
+    <nav class="links" aria-label="Footer links">
+      <a href="https://github.com/dcenatiempo">GitHub</a>
+      <a href="https://www.linkedin.com/in/devincenatiempo">LinkedIn</a>
+      <a href="resume.pdf">Resume&nbsp;(PDF)</a>
+    </nav>
+  </footer>
+
+</body>
 </html>
