@@ -153,6 +153,53 @@ h3 {
   margin: 0 0 0.5rem;
 }
 
+/* Legal pages (privacy, terms) */
+.legal a.back {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.legal h1 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.legal .updated {
+  margin: 0 0 2rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.legal h2 {
+  margin: 2.25rem 0 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--text);
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.legal ul {
+  padding-left: 1.25rem;
+}
+
+.legal li {
+  margin-bottom: 0.35rem;
+}
+
+.footer-legal {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.footer-legal a {
+  color: var(--muted);
+}
+
 footer {
   margin-top: 4rem;
   padding-top: 1.5rem;
