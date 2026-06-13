@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hermes-Google-Integration</title>
+  <meta name="description" content="Hermes-Google-Integration connects the Hermes personal AI agent to a user's own Google account so it can read and manage their Gmail, Calendar, and Drive on their behalf.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dcenatiempo.com/hermes">
+  <meta property="og:title" content="Hermes-Google-Integration">
+  <meta property="og:description" content="Connects the Hermes AI agent to your own Google account to manage Gmail, Calendar, and Drive on your behalf.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <h1>Hermes-Google-Integration</h1>
+    <p class="tagline">Connect the Hermes AI agent to your Google account</p>
+    <p class="bio">
+      Hermes-Google-Integration is a personal desktop application that lets the
+      Hermes AI agent securely authenticate with your Google account and act on
+      your behalf through the Google APIs. Once you authorize it, you can ask
+      Hermes in plain language to work with your Gmail, Google Calendar, and
+      Google Drive — and it carries out the request using your own account.
+    </p>
+  </header>
+
+  <main>
+    <section aria-labelledby="purpose-heading">
+      <h2 id="purpose-heading">What it does</h2>
+      <p>
+        Hermes is an AI assistant that runs on your own computer. On its own it
+        has no way to reach your Google data. Hermes-Google-Integration is the
+        component that handles the Google OAuth sign-in and API calls, so that
+        when you ask Hermes to do something involving Google, it has the access it
+        needs to do it. Typical requests include:
+      </p>
+      <ul>
+        <li>Search, summarize, draft, and send <strong>Gmail</strong> messages.</li>
+        <li>Read, create, and update events on your <strong>Google Calendar</strong>.</li>
+        <li>Find, read, and edit files in <strong>Google Drive, Docs, and Sheets</strong>.</li>
+      </ul>
+      <p>
+        The application is run by an individual on their own machine and operates
+        only on the single Google account that the same individual personally
+        authorizes. It is not a multi-user service.
+      </p>
+    </section>
+
+    <section aria-labelledby="how-heading">
+      <h2 id="how-heading">How it works</h2>
+      <ul>
+        <li>You install the application on your own computer.</li>
+        <li>You sign in with Google and grant the scopes you want Hermes to use (Gmail, Calendar, and/or Drive).</li>
+        <li>Authorization tokens are stored locally on your device so you don't have to sign in repeatedly.</li>
+        <li>When you make a request, the agent uses those credentials to read or update your Google data. To fulfill a request, relevant content may be sent to a large language model provider that you choose and configure — or kept entirely local if you run a local model.</li>
+        <li>You can revoke access at any time from your <a href="https://myaccount.google.com/permissions">Google Account permissions page</a>.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="privacy-heading">
+      <h2 id="privacy-heading">Privacy &amp; data use</h2>
+      <p>
+        Hermes-Google-Integration's use and transfer of information received from
+        Google APIs adheres to the
+        <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+        including the Limited Use requirements. Google data is used only to fulfill
+        your own requests, is never sold, and is never used for advertising. For
+        full details, see the documents below.
+      </p>
+      <nav class="links" aria-label="Legal links">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+      </nav>
+    </section>
+  </main>
+
+  <footer>
+    <p>Hermes-Google-Integration is a personal project by Devin Cenatiempo.</p>
+    <p class="footer-legal">
+      Contact: <a href="mailto:dcenatiempo@gmail.com">dcenatiempo@gmail.com</a>
+      · <a href="/privacy">Privacy Policy</a>
+      · <a href="/terms">Terms of Service</a>
+    </p>
+  </footer>
+
+</body>
+</html>
